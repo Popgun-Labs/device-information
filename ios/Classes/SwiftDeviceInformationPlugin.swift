@@ -21,8 +21,17 @@ public class SwiftDeviceInformationPlugin: NSObject, FlutterPlugin {
         // hence free_mem will not be implemented in iOS
         
         //2. total memory
-        let total_mem_mb = ProcessInfo.processInfo.physicalMemory/1048576
-        result(["total" : String(total_mem_mb)])
+        let total_mem = ProcessInfo.processInfo.physicalMemory
+        
+        let formatter = ByteCountFormatter()
+        formatter.allowedUnits = .useAll
+        formatter.countStyle = .file
+        formatter.includesUnit = true
+        formatter.isAdaptive = true
+
+        let humanized_total_mem = formatter.string(fromByteCount: Int64(total_mem)) // e.g '123.46 GB'
+        
+        result(["total" : humanized_total_mem])
     case "getModelName":
         result(UIDevice().type.rawValue)
     default:

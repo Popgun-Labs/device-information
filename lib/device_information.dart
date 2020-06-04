@@ -28,6 +28,8 @@ class DeviceInformation {
   }
 }
 
+// memory details are returned in human readable format e.g 52.12 MB, 128.62 GB
+
 class AndroidMemoryDetails {
   AndroidMemoryDetails({
     this.total,
