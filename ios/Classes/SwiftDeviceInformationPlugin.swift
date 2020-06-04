@@ -25,7 +25,7 @@ public class SwiftDeviceInformationPlugin: NSObject, FlutterPlugin {
         
         let formatter = ByteCountFormatter()
         formatter.allowedUnits = .useAll
-        formatter.countStyle = .file
+        formatter.countStyle = .memory
         formatter.includesUnit = true
         formatter.isAdaptive = true
 
