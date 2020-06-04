@@ -1,15 +1,7 @@
 # device_information
 
-A new Flutter plugin.
+Flutter plugin to retrieve a mobile device's information
+currently only retrieves memory data and verbose model names
 
-## Getting Started
-
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
-# device-information
+on Android, retrieves total and free memory accurately
+on iOS, only retrieves total memory because free memory implementation is inaccurate
